@@ -1,7 +1,7 @@
 import React from 'react'
 import moment from 'moment'
 
-import DataTable from '../dataTable'
+import DataTable from './dataTable'
 import Typography from '@material-ui/core/Typography'
 import LogIcon from '@material-ui/icons/Subject'
 import IconButton from '@material-ui/core/IconButton'
@@ -9,7 +9,7 @@ import JSONPretty from 'react-json-pretty'
 import Chip from '@material-ui/core/Chip'
 import Dialog from '@material-ui/core/Dialog'
 
-const LogTable = ({ loading, traces }) => {
+const LogTable = ({ traces, ...props }) => {
   const [open, setOpen] = React.useState()
 
   return (
@@ -19,8 +19,8 @@ const LogTable = ({ loading, traces }) => {
           <div>
             <JSONPretty
               data={open.data}
-              mainStyle="margin:0"
-              errorStyle="padding:50px;margin:0"
+              mainStyle="padding:40px;margin:0"
+              errorStyle="padding:40px;margin:0"
             ></JSONPretty>
           </div>
         )}
@@ -28,9 +28,6 @@ const LogTable = ({ loading, traces }) => {
       <DataTable
         size="small"
         loading={loading}
-        onPageChange={console.log}
-        onSortChange={console.log}
-        hasMore
         config={[
           { title: 'Date', _id: 'date', sortable: true },
           { title: 'Type' },
@@ -78,6 +75,7 @@ const LogTable = ({ loading, traces }) => {
           },
           []
         )}
+        {...props}
       />
     </React.Fragment>
   )
