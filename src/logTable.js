@@ -69,7 +69,7 @@ const LogTable = ({ traces, loading, ...props }) => {
                   <LogIcon />
                 </IconButton>
               ],
-              _id
+              _id: log._id
             }))
             return acc.concat(l)
           },
