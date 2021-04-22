@@ -9,7 +9,7 @@ import JSONPretty from 'react-json-pretty'
 import Chip from '@material-ui/core/Chip'
 import Dialog from '@material-ui/core/Dialog'
 
-const LogTable = ({ traces, ...props }) => {
+const LogTable = ({ traces, loading, ...props }) => {
   const [open, setOpen] = React.useState()
 
   return (
