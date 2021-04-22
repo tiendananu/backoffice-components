@@ -28,5 +28,5 @@ class Example extends Component {
 ## License
 
 MIT © [Juan Badano](https://github.com/Juan Badano)
-# backoffice-components
+
 # backoffice-components

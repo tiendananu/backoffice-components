@@ -6,7 +6,6 @@ import Typography from '@material-ui/core/Typography'
 import LogIcon from '@material-ui/icons/Subject'
 import IconButton from '@material-ui/core/IconButton'
 import JSONPretty from 'react-json-pretty'
-import 'react-json-pretty/themes/1337.css'
 import Chip from '@material-ui/core/Chip'
 import Dialog from '@material-ui/core/Dialog'
 
