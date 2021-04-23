@@ -52,7 +52,7 @@ const Status = ({
       avatar={inprogress && <CircularProgress size={16} thickness={6} />}
       size="small"
       className={classes.root}
-      label={children}
+      label={children && children.toUpperCase && children.toUpperCase()}
       variant={variant}
       {...props}
     />

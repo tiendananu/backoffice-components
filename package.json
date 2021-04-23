@@ -1,6 +1,6 @@
 {
   "name": "@jibadano/backoffice-components",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Custom Material UI React components",
   "author": "Juan Badano",
   "license": "MIT",
@@ -59,6 +59,7 @@
     "@material-ui/lab": "^4.0.0-alpha.56",
     "clsx": "^1.1.1",
     "moment": "^2.29.1",
+    "notistack": "^1.0.6",
     "react-json-pretty": "^2.2.0"
   }
 }

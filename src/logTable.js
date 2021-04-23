@@ -54,7 +54,9 @@ const LogTable = ({ traces, loading, ...props }) => {
           (acc, { _id, operation, logs, module, ip, user }) => {
             const l = logs.map((log) => ({
               values: [
-                moment(log.timestamp).utc().format('YYYY-MM-DD HH:mm:ss'),
+                <Typography variant="caption">
+                  {moment(log.timestamp).utc().format('YYYY-MM-DD HH:mm:ss')}
+                </Typography>,
                 <Chip label={log.type} variant="outlined" size="small" />,
                 log.message,
                 operation,
