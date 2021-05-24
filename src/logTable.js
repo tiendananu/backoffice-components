@@ -73,7 +73,7 @@ const LogTable = ({ traces, loading, ...props }) => {
               ],
               _id: log._id
             }))
-            return acc.concat(l)
+            return acc.concat(l.reverse())
           },
           []
         )}

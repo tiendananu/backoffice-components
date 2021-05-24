@@ -92,6 +92,10 @@ const useStyles = makeStyles((theme) => ({
     width: 48,
     height: 48,
     margin: theme.spacing(1, 0)
+  },
+  fabIcon: {
+    backgroundColor: theme.palette.common.white,
+    zIndex: 1
   }
 }))
 
@@ -177,7 +181,7 @@ const Menu = ({
     <div>
       <Hidden lgUp>
         <Box position="fixed" top={0} right={0} p={2}>
-          <Fab onClick={() => setOpen(true)}>
+          <Fab className={classes.fabIcon} onClick={() => setOpen(true)}>
             <MenuIcon />
           </Fab>
         </Box>
