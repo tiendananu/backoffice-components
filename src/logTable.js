@@ -52,7 +52,7 @@ const LogTable = ({ traces, loading, ...props }) => {
         ]}
         rows={traces.reduce(
           (acc, { _id, operation, logs, module, ip, user }) => {
-            const l = logs.reverse().map((log) => ({
+            const l = logs.map((log) => ({
               values: [
                 <Typography variant="caption">
                   {moment(log.timestamp).utc().format('YYYY-MM-DD HH:mm:ss')}
