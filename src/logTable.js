@@ -59,7 +59,12 @@ const LogTable = ({ traces, loading, ...props }) => {
                 </Typography>,
                 <Chip label={log.type} variant="outlined" size="small" />,
                 log.message,
-                operation,
+                <Typography
+                  variant="body1"
+                  style={{ fontWeight: 'bold', color: `#${_id.slice(0, 6)}` }}
+                >
+                  {operation}
+                </Typography>,
                 <Typography variant="caption">{user}</Typography>,
                 <Typography variant="caption">{ip}</Typography>,
                 <Chip label={module} color="primary" size="small" />,
