@@ -34,28 +34,37 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-const DataList = ({ title, images, children = [], onEdit, onRemove }) => {
+const DataList = ({
+  title,
+  images,
+  children = [],
+  onEdit,
+  onRemove,
+  orientation = 'vertical'
+}) => {
   const classes = useStyles()
 
   children = children instanceof Array ? children : [children]
   const hasActions = onEdit || onRemove
   return (
     <Paper className={classes.root}>
-      <List>
+      <Box display={orientation == 'horizontal' && 'flex'}>
         {Boolean(images && images.length) && <Carousel images={images} />}
-        {title && (
-          <ListItem divider>
-            <Typography className={classes.title} variant="h6" gutterBottom>
-              {title}
-            </Typography>
-          </ListItem>
-        )}
-        {children.map((item, i) => (
-          <ListItem key={i} divider={Boolean(i + 1 != children.length)}>
-            {item}
-          </ListItem>
-        ))}
-      </List>
+        <List>
+          {title && (
+            <ListItem divider>
+              <Typography className={classes.title} variant="h6" gutterBottom>
+                {title}
+              </Typography>
+            </ListItem>
+          )}
+          {children.map((item, i) => (
+            <ListItem key={i} divider={Boolean(i + 1 != children.length)}>
+              {item}
+            </ListItem>
+          ))}
+        </List>
+      </Box>
       {hasActions && (
         <Box display="flex" flexDirection="row-reverse" p={3}>
           {onEdit && (

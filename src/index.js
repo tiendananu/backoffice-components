@@ -12,5 +12,7 @@ export { default as Title } from './title'
 export { default as ContextButton } from './contextButton'
 export { default as FloatingButton } from './floatingButton'
 export { default as LogTable } from './logTable'
+export { default as SideMenu } from './sideMenu'
+
 export { default as Splash } from './splash'
 export * from './notification'
