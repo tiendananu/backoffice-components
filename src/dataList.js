@@ -63,7 +63,7 @@ const DataList = ({
               {item}
             </ListItem>
           ))}
-        </List>
+        </List>{' '}
       </Box>
       {hasActions && (
         <Box display="flex" flexDirection="row-reverse" p={3}>
