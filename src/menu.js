@@ -94,8 +94,7 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(1, 0)
   },
   fabIcon: {
-    backgroundColor: theme.palette.common.white,
-    zIndex: 1
+    backgroundColor: theme.palette.common.white
   }
 }))
 
@@ -180,7 +179,7 @@ const Menu = ({
   return (
     <div>
       <Hidden lgUp>
-        <Box position="fixed" top={0} right={0} p={2}>
+        <Box position="fixed" top={0} right={0} p={2} zIndex={1}>
           <Fab className={classes.fabIcon} onClick={() => setOpen(true)}>
             <MenuIcon />
           </Fab>
