@@ -49,23 +49,25 @@ const DataList = ({
   return (
     <Paper className={classes.root}>
       <Box display={orientation == 'horizontal' && 'flex'}>
-        <Box width={orientation == 'horizontal' ? '50%' : 'auto'}>
+        <Box width="100%">
           {Boolean(images && images.length) && <Carousel images={images} />}
         </Box>
-        <List>
-          {title && (
-            <ListItem divider>
-              <Typography className={classes.title} variant="h6" gutterBottom>
-                {title}
-              </Typography>
-            </ListItem>
-          )}
-          {children.map((item, i) => (
-            <ListItem key={i} divider={Boolean(i + 1 != children.length)}>
-              {item}
-            </ListItem>
-          ))}
-        </List>{' '}
+        <Box width="100%">
+          <List>
+            {title && (
+              <ListItem divider>
+                <Typography className={classes.title} variant="h6" gutterBottom>
+                  {title}
+                </Typography>
+              </ListItem>
+            )}
+            {children.map((item, i) => (
+              <ListItem key={i} divider={Boolean(i + 1 != children.length)}>
+                {item}
+              </ListItem>
+            ))}
+          </List>{' '}
+        </Box>
       </Box>
       {hasActions && (
         <Box display="flex" flexDirection="row-reverse" p={3}>
