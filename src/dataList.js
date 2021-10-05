@@ -49,7 +49,9 @@ const DataList = ({
   return (
     <Paper className={classes.root}>
       <Box display={orientation == 'horizontal' && 'flex'}>
-        {Boolean(images && images.length) && <Carousel images={images} />}
+        <Box width={orientation == 'horizontal' ? '50%' : 'auto'}>
+          {Boolean(images && images.length) && <Carousel images={images} />}
+        </Box>
         <List>
           {title && (
             <ListItem divider>
