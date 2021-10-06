@@ -27,7 +27,8 @@ export const DataListItem = ({ label, primary, secondary }) => (
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: '100%'
+    width: '100%',
+    overflow: 'hidden'
   },
   title: {
     padding: theme.spacing(1)

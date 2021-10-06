@@ -144,7 +144,7 @@ const Menu = ({
             <Box
               onClick={() => {
                 setOpen()
-                onChange('/account')
+                onChange('/user?_id=' + user._id)
               }}
               flexGrow={1}
               display="flex"
