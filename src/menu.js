@@ -140,36 +140,20 @@ const Menu = ({
           display="flex"
           flexDirection="column"
         >
-          <Box px={2} display="flex">
-            <Box
-              onClick={() => {
-                setOpen()
-                onChange('/user?_id=' + user._id)
-              }}
-              flexGrow={1}
-              display="flex"
-              alignItems="center"
-            >
-              <Avatar className={classes.avatar} src={user.image} />
-              <Box p={2}>
-                <Typography color="textPrimary" variant="h6">
-                  {user.name}
-                </Typography>
-                <Typography color="textSecondary" variant="body2">
-                  {user.role}
-                </Typography>
-              </Box>
-            </Box>
-          </Box>
+          {user}
           <Divider />
 
           <Box p={2} display="flex">
-            {onLogOut && (
-              <IconButton onClick={onLogOut}>
-                <LogOutIcon fontSize="small" />
-              </IconButton>
-            )}
-            <Language />
+            <Box flexGrow={1}>
+              {onLogOut && (
+                <IconButton onClick={onLogOut}>
+                  <LogOutIcon fontSize="small" />
+                </IconButton>
+              )}
+            </Box>
+            <Box>
+              <Language />
+            </Box>
           </Box>
         </Box>
       )}
