@@ -32,9 +32,7 @@ const useStylesItem = makeStyles((theme) => ({
     textTransform: 'none',
     width: '100%'
   },
-  userName: {
-    cursor: 'pointer'
-  },
+
   icon: {
     marginRight: theme.spacing(1)
   },
@@ -98,6 +96,9 @@ const useStyles = makeStyles((theme) => ({
   },
   fabIcon: {
     backgroundColor: theme.palette.common.white
+  },
+  userName: {
+    cursor: 'pointer'
   }
 }))
 
@@ -144,7 +145,7 @@ const Menu = ({
           display="flex"
           flexDirection="column"
         >
-          <Box px={2} display="flex">
+          <Box px={3} display="flex">
             <Box
               onClick={() => {
                 setOpen()
@@ -171,7 +172,7 @@ const Menu = ({
           </Box>
           <Divider />
 
-          <Box p={2} display="flex">
+          <Box p={3} display="flex" alignItems="center">
             <Box flexGrow={1}>
               {onLogOut && (
                 <IconButton onClick={onLogOut}>
