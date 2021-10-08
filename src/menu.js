@@ -32,6 +32,9 @@ const useStylesItem = makeStyles((theme) => ({
     textTransform: 'none',
     width: '100%'
   },
+  userName: {
+    cursor: 'pointer'
+  },
   icon: {
     marginRight: theme.spacing(1)
   },
@@ -104,6 +107,7 @@ const Menu = ({
   user,
   route,
   onLogOut,
+  onUserClick = () => {},
   onChange = () => {}
 }) => {
   const classes = useStyles()
@@ -140,7 +144,31 @@ const Menu = ({
           display="flex"
           flexDirection="column"
         >
-          {user}
+          <Box px={2} display="flex">
+            <Box
+              onClick={() => {
+                setOpen()
+                onUserClick()
+              }}
+              flexGrow={1}
+              display="flex"
+              alignItems="center"
+            >
+              <Avatar
+                className={classes.avatar}
+                variant="rounded"
+                src={user.avatar}
+              />
+              <Box p={2} className={classes.userName}>
+                <Typography color="textPrimary" variant="h6">
+                  {user.name}
+                </Typography>
+                <Typography color="textSecondary" variant="body2">
+                  {user.jobTitle}
+                </Typography>
+              </Box>
+            </Box>
+          </Box>
           <Divider />
 
           <Box p={2} display="flex">
