@@ -18,8 +18,8 @@ const SideMenu = ({ children, swipeable, title = 'Menu', defaultOpen }) => {
         <Button
           fullWidth
           size="large"
-          variant="outlined"
-          color="primary"
+          variant="contained"
+          disableElevation
           onClick={() => setOpen(true)}
         >
           {title}

@@ -10,7 +10,9 @@ import {
   Title,
   ContextButton,
   FloatingButton,
-  LogTable
+  LogTable,
+  Actions,
+  ActionsSet
 } from 'components'
 
 import {
@@ -22,7 +24,7 @@ import {
   Tune,
   Refresh
 } from '@material-ui/icons'
-import { TextField, Tabs, Tab, Box } from '@material-ui/core'
+import { TextField, Tabs, Tab, Box, Paper } from '@material-ui/core'
 
 const traces = [
   {
@@ -199,7 +201,7 @@ export const DataTableStory = () => {
   })
   return (
     <DataTable
-      filters={
+      head={
         <>
           <Tabs value={1}>
             <Tab label="Item One" />
@@ -356,3 +358,63 @@ export const MenuStory = () => {
     />
   )
 }
+
+export const BottomActionsStory = () => (
+  <Paper style={{ padding: 24, width: '100%' }}>
+    <Actions
+      fullWidth
+      optional={[
+        {
+          children: 'Options',
+          variant: 'contained',
+          elevation: 0,
+          onClick: () => {}
+        }
+      ]}
+      left={[
+        {
+          children: 'Back',
+          variant: 'link',
+          onClick: () => {}
+        }
+      ]}
+      right={[
+        {
+          children: 'Remove',
+          variant: 'outlined',
+          color: 'secondary',
+
+          onClick: () => {}
+        },
+        {
+          children: 'Edit',
+          variant: 'contained',
+          color: 'primary',
+          onClick: () => {}
+        }
+      ]}
+    />
+  </Paper>
+)
+
+export const BottomActionsSetStory = () => (
+  <Paper style={{ padding: 24, width: '100%' }}>
+    <ActionsSet
+      set={[
+        {
+          children: 'Remove',
+          variant: 'outlined',
+          color: 'secondary',
+
+          onClick: () => {}
+        },
+        {
+          children: 'Edit',
+          variant: 'contained',
+          color: 'primary',
+          onClick: () => {}
+        }
+      ]}
+    />
+  </Paper>
+)

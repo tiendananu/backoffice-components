@@ -108,6 +108,7 @@ const Menu = ({
   user,
   route,
   onLogOut,
+  accountButtonText = 'Config your account',
   onUserClick = () => {},
   onChange = () => {}
 }) => {
@@ -138,13 +139,14 @@ const Menu = ({
           ))}
         </List>
       </Box>
-      {user && (
-        <Box
-          justifyContent="flex-end"
-          height="100%"
-          display="flex"
-          flexDirection="column"
-        >
+      <Box
+        justifyContent="flex-end"
+        height="100%"
+        display="flex"
+        flexDirection="column"
+      >
+        {' '}
+        {user ? (
           <Box px={3} display="flex">
             <Box
               onClick={() => {
@@ -170,22 +172,38 @@ const Menu = ({
               </Box>
             </Box>
           </Box>
-          <Divider />
-
-          <Box p={3} display="flex" alignItems="center">
-            <Box flexGrow={1}>
-              {onLogOut && (
-                <IconButton onClick={onLogOut}>
-                  <LogOutIcon fontSize="small" />
-                </IconButton>
-              )}
-            </Box>
-            <Box>
-              <Language />
-            </Box>
+        ) : (
+          <Box
+            px={3}
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+          >
+            <Button
+              variant="link"
+              onClick={() => {
+                setOpen()
+                onUserClick()
+              }}
+            >
+              {accountButtonText}
+            </Button>
+          </Box>
+        )}
+        <Divider />
+        <Box p={3} display="flex" alignItems="center">
+          <Box flexGrow={1}>
+            {onLogOut && (
+              <IconButton onClick={onLogOut}>
+                <LogOutIcon fontSize="small" />
+              </IconButton>
+            )}
+          </Box>
+          <Box>
+            <Language />
           </Box>
         </Box>
-      )}
+      </Box>
     </Box>
   )
 

@@ -7,21 +7,25 @@ import { Carousel } from '@jibadano/components'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import EditIcon from '@material-ui/icons/Edit'
-import RemoveIcon from '@material-ui/icons/Delete'
+import TextField from '@material-ui/core/TextField'
 import Box from '@material-ui/core/Box'
 
 export const DataListItem = ({ label, primary, secondary }) => (
-  <Box display="flex" alignItems="center" width="100%" p={1}>
-    <Typography
-      variant="body2"
-      style={{ fontWeight: 'bold', verticalAlign: 'center', width: '40%' }}
-      noWrap
-    >
-      {label}
-    </Typography>
-    <Typography align="left" color="textSecondary" style={{ width: '100%' }}>
-      {primary}
-    </Typography>
+  <Box display={{ xs: 'block', md: 'flex' }} alignItems="center" width="100%">
+    <Box p={1} width={{ xs: '100%', md: '40%' }}>
+      <Typography
+        variant="body2"
+        style={{ fontWeight: 'bold', verticalAlign: 'center' }}
+        noWrap
+      >
+        {label}
+      </Typography>
+    </Box>
+    <Box p={1} style={{ width: '100%' }}>
+      <Typography align="left" color="textSecondary">
+        <TextField fullWidth variant="outlined"></TextField>
+      </Typography>
+    </Box>
   </Box>
 )
 
@@ -57,7 +61,7 @@ const DataList = ({
           <List>
             {title && (
               <ListItem divider>
-                <Typography className={classes.title} variant="h6" gutterBottom>
+                <Typography className={classes.title} variant="h5" gutterBottom>
                   {title}
                 </Typography>
               </ListItem>

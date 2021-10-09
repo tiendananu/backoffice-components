@@ -52,14 +52,15 @@ const DataTable = ({
   onPageChange,
   hasMore,
   size,
-  filters,
+  head,
+  footer,
   ...props
 }) => {
   const mobile = useMediaQuery((theme) => theme.breakpoints.down('sm'))
   const button = rows.some(({ onClick }) => Boolean(onClick))
   return (
     <TableContainer component={Paper} {...props}>
-      {filters}
+      {head}
       <Table size={size}>
         <TableHead>
           <TableRow>
@@ -109,6 +110,7 @@ const DataTable = ({
           />
         </Box>
       )}
+      {footer}
     </TableContainer>
   )
 }
