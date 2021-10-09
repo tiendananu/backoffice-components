@@ -15,6 +15,7 @@ export { default as LogTable } from './logTable'
 export { default as SideMenu } from './sideMenu'
 export { default as Actions } from './actions'
 export { default as ActionsSet } from './actions/set'
+export { default as CardSkeleton } from './cardSkeleton'
 
 export { default as Splash } from './splash'
 export * from './notification'

@@ -12,7 +12,8 @@ import {
   FloatingButton,
   LogTable,
   Actions,
-  ActionsSet
+  ActionsSet,
+  CardSkeleton
 } from 'components'
 
 import {
@@ -418,3 +419,5 @@ export const BottomActionsSetStory = () => (
     />
   </Paper>
 )
+
+export const CardSkeletonStory = () => <CardSkeleton height={600} />

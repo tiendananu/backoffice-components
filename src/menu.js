@@ -192,7 +192,7 @@ const Menu = ({
           </Box>
         )}
         <Divider />
-        <Box p={3} display="flex" alignItems="center">
+        <Box px={3} py={1} display="flex" alignItems="center">
           <Box flexGrow={1}>
             {onLogOut && (
               <IconButton onClick={onLogOut}>
