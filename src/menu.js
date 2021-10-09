@@ -145,7 +145,6 @@ const Menu = ({
         display="flex"
         flexDirection="column"
       >
-        {' '}
         {user ? (
           <Box px={3} display="flex">
             <Box
@@ -175,11 +174,13 @@ const Menu = ({
         ) : (
           <Box
             px={3}
+            pb={2}
             display="flex"
             justifyContent="center"
             alignItems="center"
           >
             <Button
+              size="small"
               variant="link"
               onClick={() => {
                 setOpen()

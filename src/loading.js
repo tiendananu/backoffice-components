@@ -11,7 +11,7 @@ const useStyles = makeStyles(() => ({
   }
 }))
 
-export default () => {
+const Loading = () => {
   const classes = useStyles()
   return (
     <div className={classes.root}>
@@ -19,3 +19,5 @@ export default () => {
     </div>
   )
 }
+
+export default Loading

@@ -6,8 +6,10 @@ import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 const ActionsSet = ({ set, fullWidth }) => {
   const mobile = useMediaQuery((theme) => theme.breakpoints.down('sm'))
-
   if (!set || !set.length) return ''
+  set = set.filter(({ display }) => display)
+
+  if (!set.length) return ''
 
   return (
     <Box display={{ xs: 'block', md: 'flex' }}>

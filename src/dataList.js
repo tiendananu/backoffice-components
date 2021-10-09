@@ -7,7 +7,6 @@ import { Carousel } from '@jibadano/components'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import EditIcon from '@material-ui/icons/Edit'
-import TextField from '@material-ui/core/TextField'
 import Box from '@material-ui/core/Box'
 
 export const DataListItem = ({ label, primary, secondary }) => (
@@ -23,7 +22,7 @@ export const DataListItem = ({ label, primary, secondary }) => (
     </Box>
     <Box p={1} style={{ width: '100%' }}>
       <Typography align="left" color="textSecondary">
-        <TextField fullWidth variant="outlined"></TextField>
+        {primary}
       </Typography>
     </Box>
   </Box>
