@@ -4,7 +4,7 @@ import Skeleton from '@material-ui/lab/Skeleton'
 import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles((theme) => ({
-  root: ({ height }) => ({
+  root: ({ height = '100%' }) => ({
     display: 'flex',
     flexDirection: 'column',
     width: '100%',

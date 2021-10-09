@@ -15,7 +15,7 @@ const Loading = () => {
   const classes = useStyles()
   return (
     <div className={classes.root}>
-      <CircularProgress variant="indeterminate" />
+      <CircularProgress size={64} thickness={5} variant="indeterminate" />
     </div>
   )
 }
