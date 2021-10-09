@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer'
 import Drawer from '@material-ui/core/Drawer'
@@ -13,12 +13,14 @@ const SideMenu = ({ children, swipeable, title = 'Menu', defaultOpen }) => {
   if (!mobile) return children
   const Component = swipeable ? SwipeableDrawer : Drawer
   return (
-    <>
-      <Box position="fixed" zIndex={1} bottom={0} p={2} left={0} width="100%">
+    <React.Fragment>
+      <Box position="fixed" zIndex={1} bottom={0} left={0} width="100%">
         <Button
+          style={{ borderBottomLeftRadius: 0, borderBottomRightRadius: 0 }}
           fullWidth
           size="large"
           variant="contained"
+          color="primary"
           disableElevation
           onClick={() => setOpen(true)}
         >
@@ -34,7 +36,7 @@ const SideMenu = ({ children, swipeable, title = 'Menu', defaultOpen }) => {
       >
         {children}
       </Component>
-    </>
+    </React.Fragment>
   )
 }
 
