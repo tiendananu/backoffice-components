@@ -1,7 +1,7 @@
 import React from 'react'
-import { IconButton, Chip, Box } from '@material-ui/core'
-import ChevronRightIcon from '@material-ui/icons/ChevronRight'
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
+import { IconButton, Chip, Box } from '@mui/material'
+import ChevronRightIcon from '@mui/icons-material/ChevronRight'
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 
 const Pagination = ({ page, setPage, hasMore, size }) => (
   <Box display="flex" justifyContent="center" alignItems="center">

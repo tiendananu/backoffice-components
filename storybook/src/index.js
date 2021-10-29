@@ -1,31 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import CssBaseline from '@material-ui/core/CssBaseline'
-import { ThemeProvider } from '@material-ui/core/styles'
+import CssBaseline from '@mui/material/CssBaseline'
+import { ThemeProvider } from '@mui/material/styles'
 import theme from './theme'
 import * as Components from './demos'
-import Container from '@material-ui/core/Container'
-import Typography from '@material-ui/core/Typography'
-import Tab from '@material-ui/core/Tab'
-import Tabs from '@material-ui/core/Tabs'
-import Box from '@material-ui/core/Box'
-import ComponentIcon from '@material-ui/icons/Category'
-import i18n from 'i18next'
-import { initReactI18next } from 'react-i18next'
-
-i18n
-  .use(initReactI18next) // passes i18n down to react-i18next
-  .init({
-    fallbackLng: 'en',
-    whitelist: ['en', 'es'],
-    keySeparator: false, // we do not use keys in form messages.welcome
-    interpolation: {
-      escapeValue: false // react already safes from xss
-    }
-  })
-i18n.languages = ['en', 'es']
-
-export default i18n
+import Container from '@mui/material/Container'
+import Typography from '@mui/material/Typography'
+import Tab from '@mui/material/Tab'
+import Tabs from '@mui/material/Tabs'
+import Box from '@mui/material/Box'
+import ComponentIcon from '@mui/icons-material/Category'
 
 const Menu = () => {
   const [component, setComponent] = React.useState()

@@ -1,9 +1,9 @@
 import React from 'react'
-import Button from '@material-ui/core/Button'
-import BackIcon from '@material-ui/icons/ChevronLeft'
-import Box from '@material-ui/core/Box'
-import Chip from '@material-ui/core/Chip'
-import Fade from '@material-ui/core/Fade'
+import Button from '@mui/material/Button'
+import BackIcon from '@mui/icons-material/ChevronLeft'
+import Box from '@mui/material/Box'
+import Chip from '@mui/material/Chip'
+import Fade from '@mui/material/Fade'
 
 const ContextButton = ({ icon, label }) => (
   <Button startIcon={<BackIcon />}>

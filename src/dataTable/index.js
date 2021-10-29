@@ -1,5 +1,5 @@
 import React from 'react'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
+import useMediaQuery from '@mui/material/useMediaQuery'
 
 import {
   Table,
@@ -12,7 +12,7 @@ import {
   Paper,
   TableContainer,
   Box
-} from '@material-ui/core'
+} from '@mui/material'
 import DataTableItem, { DataTableItemSkeleton } from './item'
 import Pagination from '../pagination'
 

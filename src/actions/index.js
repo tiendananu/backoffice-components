@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Box from '@material-ui/core/Box'
+import Box from '@mui/material/Box'
 import ActionsSet from './set'
 const Actions = ({ optional, left, right }) => (
   <Box width="100%">

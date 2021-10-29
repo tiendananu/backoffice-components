@@ -1,11 +1,11 @@
 import React from 'react'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
+import useMediaQuery from '@mui/material/useMediaQuery'
 
-import { TableCell, TableRow } from '@material-ui/core'
+import { TableCell, TableRow } from '@mui/material'
 
-import Skeleton from '@material-ui/lab/Skeleton'
-import IconButton from '@material-ui/core/IconButton'
-import ChevronRightIcon from '@material-ui/icons/ChevronRight'
+import Skeleton from '@mui/material/Skeleton'
+import IconButton from '@mui/material/IconButton'
+import ChevronRightIcon from '@mui/icons-material/ChevronRight'
 
 export const DataTableItemSkeleton = ({ config = [], button }) => {
   const mobile = useMediaQuery((theme) => theme.breakpoints.down('sm'))

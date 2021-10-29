@@ -1,8 +1,8 @@
 import React from 'react'
-import Typography from '@material-ui/core/Typography'
-import LinearProgress from '@material-ui/core/LinearProgress'
+import Typography from '@mui/material/Typography'
+import LinearProgress from '@mui/material/LinearProgress'
 
-import { makeStyles } from '@material-ui/core/styles'
+import { makeStyles } from '@mui/styles'
 
 const useStyles = makeStyles(() => ({
   root: {

@@ -1,7 +1,7 @@
 import React from 'react'
-import Paper from '@material-ui/core/Paper'
-import Skeleton from '@material-ui/lab/Skeleton'
-import { makeStyles } from '@material-ui/core/styles'
+import Paper from '@mui/material/Paper'
+import Skeleton from '@mui/material/Skeleton'
+import { makeStyles } from '@mui/styles'
 
 const useStyles = makeStyles((theme) => ({
   root: ({ height = '100%' }) => ({

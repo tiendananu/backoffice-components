@@ -2,12 +2,12 @@ import React from 'react'
 import moment from 'moment'
 
 import DataTable from './dataTable'
-import Typography from '@material-ui/core/Typography'
-import LogIcon from '@material-ui/icons/Subject'
-import IconButton from '@material-ui/core/IconButton'
+import Typography from '@mui/material/Typography'
+import LogIcon from '@mui/icons-material/Subject'
+import IconButton from '@mui/material/IconButton'
 import JSONPretty from 'react-json-pretty'
-import Chip from '@material-ui/core/Chip'
-import Dialog from '@material-ui/core/Dialog'
+import Chip from '@mui/material/Chip'
+import Dialog from '@mui/material/Dialog'
 
 const LogTable = ({ traces, loading, ...props }) => {
   const [open, setOpen] = React.useState()

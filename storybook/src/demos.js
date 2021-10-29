@@ -24,8 +24,8 @@ import {
   Settings,
   Tune,
   Refresh
-} from '@material-ui/icons'
-import { TextField, Tabs, Tab, Box, Paper } from '@material-ui/core'
+} from '@mui/icons-material'
+import { TextField, Tabs, Tab, Box, Paper } from '@mui/material'
 
 const traces = [
   {

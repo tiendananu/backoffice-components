@@ -1,13 +1,12 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/core/styles'
-import List from '@material-ui/core/List'
-import ListItem from '@material-ui/core/ListItem'
-import Paper from '@material-ui/core/Paper'
-import { Carousel } from '@jibadano/components'
-import Typography from '@material-ui/core/Typography'
-import Button from '@material-ui/core/Button'
-import EditIcon from '@material-ui/icons/Edit'
-import Box from '@material-ui/core/Box'
+import { makeStyles } from '@mui/styles'
+import List from '@mui/material/List'
+import ListItem from '@mui/material/ListItem'
+import Paper from '@mui/material/Paper'
+import Typography from '@mui/material/Typography'
+import Button from '@mui/material/Button'
+import EditIcon from '@mui/icons-material/Edit'
+import Box from '@mui/material/Box'
 
 export const DataListItem = ({ label, primary, secondary }) => (
   <Box display={{ xs: 'block', md: 'flex' }} alignItems="center" width="100%">
@@ -40,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
 
 const DataList = ({
   title,
-  images,
+  header,
   children = [],
   onEdit,
   onRemove,
@@ -53,9 +52,7 @@ const DataList = ({
   return (
     <Paper className={classes.root}>
       <Box display={orientation == 'horizontal' && 'flex'}>
-        <Box width="100%">
-          {Boolean(images && images.length) && <Carousel images={images} />}
-        </Box>
+        {header && <Box width="100%">{header}</Box>}
         <Box width="100%">
           <List>
             {title && (

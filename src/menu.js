@@ -9,14 +9,13 @@ import {
   List,
   IconButton,
   Typography,
-  makeStyles,
   Button,
   ListItem,
   Fab
-} from '@material-ui/core'
-import MenuIcon from '@material-ui/icons/Menu'
-import LogOutIcon from '@material-ui/icons/PowerSettingsNew'
-import { Language } from '@jibadano/components'
+} from '@mui/material'
+import { makeStyles } from '@mui/styles'
+import MenuIcon from '@mui/icons-material/Menu'
+import LogOutIcon from '@mui/icons-material/PowerSettingsNew'
 const useStylesItem = makeStyles((theme) => ({
   item: {
     display: 'flex',
@@ -105,6 +104,7 @@ const useStyles = makeStyles((theme) => ({
 const Menu = ({
   logo,
   items = [],
+  language,
   user,
   route,
   onLogOut,
@@ -200,9 +200,7 @@ const Menu = ({
               </IconButton>
             )}
           </Box>
-          <Box>
-            <Language />
-          </Box>
+          <Box>{language}</Box>
         </Box>
       </Box>
     </Box>

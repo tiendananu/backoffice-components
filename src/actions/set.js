@@ -1,8 +1,8 @@
 import React from 'react'
 
-import Box from '@material-ui/core/Box'
-import Button from '@material-ui/core/Button'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
+import Box from '@mui/material/Box'
+import Button from '@mui/material/Button'
+import useMediaQuery from '@mui/material/useMediaQuery'
 
 const ActionsSet = ({ set, fullWidth }) => {
   const mobile = useMediaQuery((theme) => theme.breakpoints.down('sm'))

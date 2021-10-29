@@ -1,21 +1,18 @@
 import React from 'react'
-import { makeStyles } from '@material-ui/core/styles'
+import { makeStyles } from '@mui/styles'
 
-import Chip from '@material-ui/core/Chip'
-import Green from '@material-ui/core/colors/green'
-import Red from '@material-ui/core/colors/red'
-import Amber from '@material-ui/core/colors/amber'
-import Blue from '@material-ui/core/colors/blue'
-import Grey from '@material-ui/core/colors/grey'
-import CircularProgress from '@material-ui/core/CircularProgress'
-import DoneIcon from '@material-ui/icons/Done'
+import Chip from '@mui/material/Chip'
+import { green, red, amber, blue, grey } from '@mui/material/colors'
+
+import CircularProgress from '@mui/material/CircularProgress'
+import DoneIcon from '@mui/icons-material/Done'
 const useStyles = makeStyles({
   root: ({ severity, variant }) => {
-    let color = Grey
-    if (severity == 'ok') color = Green
-    if (severity == 'error') color = Red
-    if (severity == 'info') color = Blue
-    if (severity == 'warning') color = Amber
+    let color = grey
+    if (severity == 'ok') color = green
+    if (severity == 'error') color = red
+    if (severity == 'info') color = blue
+    if (severity == 'warning') color = amber
 
     if (variant == 'outlined')
       return {
