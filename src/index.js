@@ -2,7 +2,7 @@ export { default as Menu } from './menu'
 export { MenuItem } from './menu'
 
 export { default as DataList } from './dataList'
-export { DataListItem } from './dataList'
+export { default as DataListItem } from './dataListItem'
 export { default as Status } from './status'
 export { default as Loading } from './loading'
 export { default as Footer } from './footer'
