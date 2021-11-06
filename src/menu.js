@@ -49,7 +49,7 @@ const useStylesItem = makeStyles((theme) => ({
   }
 }))
 
-export const MenuItem = ({
+const MenuItem = ({
   onClick,
   selected,
   className,
