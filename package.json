@@ -1,12 +1,15 @@
 {
   "name": "@jibadano/backoffice-components",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "Custom Material UI React components",
   "author": "Juan Badano",
   "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
+  "exports": {
+    "./": "./dist/"
+  },
   "private": false,
   "engines": {
     "node": ">=10"
