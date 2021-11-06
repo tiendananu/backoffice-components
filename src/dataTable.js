@@ -13,7 +13,7 @@ import {
   TableContainer,
   Box
 } from '@mui/material'
-import DataTableItem, { DataTableItemSkeleton } from './item'
+import DataTableItem, { DataTableItemSkeleton } from './dataTableItem'
 import Pagination from '../pagination'
 
 const DataTableHeadCell = ({ onClick, sort, value, children, ...props }) => {
