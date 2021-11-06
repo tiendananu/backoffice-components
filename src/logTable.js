@@ -57,12 +57,26 @@ const LogTable = ({ traces, loading, ...props }) => {
                 <Typography variant="caption">
                   {moment(log.timestamp).utc().format('YYYY-MM-DD HH:mm:ss')}
                 </Typography>,
-                <Chip label={log.type} variant="outlined" size="small" />,
+                <Chip
+                  label={log.type}
+                  color={log.type}
+                  variant="outlined"
+                  size="small"
+                />,
                 log.message,
                 <Typography
                   variant="body1"
-                  style={{ fontWeight: 'bold', color: `#${_id.slice(0, 6)}` }}
+                  style={{ display: 'flex', alignItems: 'center' }}
                 >
+                  <div
+                    style={{
+                      width: 10,
+                      height: 10,
+                      marginRight: 10,
+                      borderRadius: 300,
+                      backgroundColor: `#${_id.slice(0, 6)}`
+                    }}
+                  />
                   {operation}
                 </Typography>,
                 <Typography variant="caption">{user}</Typography>,

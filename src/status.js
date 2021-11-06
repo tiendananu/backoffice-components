@@ -5,7 +5,7 @@ import Chip from '@mui/material/Chip'
 import { green, red, amber, blue, grey } from '@mui/material/colors'
 
 import CircularProgress from '@mui/material/CircularProgress'
-import DoneIcon from '@mui/icons-material/Done'
+
 const useStyles = makeStyles({
   root: ({ severity, variant }) => {
     let color = grey
