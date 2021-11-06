@@ -14,7 +14,7 @@ import {
   Box
 } from '@mui/material'
 import DataTableItem, { DataTableItemSkeleton } from './dataTableItem'
-import Pagination from '../pagination'
+import Pagination from './pagination'
 
 const DataTableHeadCell = ({ onClick, sort, value, children, ...props }) => {
   const active = Boolean(sort && sort.endsWith(value))
